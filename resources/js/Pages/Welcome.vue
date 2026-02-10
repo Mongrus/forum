@@ -1,5 +1,4 @@
 <script setup>
-import BaseWindow from '@/Components/bloc/BaseWindow.vue';
 import BaseLayout from '@/Layouts/BaseLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import myComputer from '../../assets/img/computer.png';

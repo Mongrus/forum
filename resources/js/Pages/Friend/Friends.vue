@@ -3,7 +3,7 @@ import BaseWindow from '@/Components/bloc/BaseWindow.vue';
 import CustomButton from '@/Components/CustomButton.vue';
 import IsOnlineUser from '@/Components/IsOnlineUser.vue';
 import BaseLayout from '@/Layouts/BaseLayout.vue';
-import { Link, usePage } from '@inertiajs/vue3';
+import { Head, Link, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 import { route } from 'ziggy-js';
 
@@ -16,6 +16,7 @@ const user = computed(() => usePage().props.auth.user);
 </script>
 
 <template>
+    <Head title="Друзья"/>
     <BaseLayout>
         <BaseWindow>
             <template #title>

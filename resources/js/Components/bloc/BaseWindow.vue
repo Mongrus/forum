@@ -1,5 +1,4 @@
 <script setup>
-import { Head } from '@inertiajs/vue3';
 
 defineProps({
     theme: {
@@ -12,7 +11,6 @@ defineProps({
 
 
 <template>
-    <Head title="Друзья"/>
     <div class="baseWindow" :class="`baseWindow__${theme}`">
         <div class="baseWindow__back">
             <slot name="back" />
