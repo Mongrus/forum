@@ -1,0 +1,108 @@
+@use "./mixin" as *
+@use "./color" as *
+    
+html
+    min-height: 100%
+    font-size: 62.5% !important
+    @include respond(tab-port)
+        font-size: 56.25% !important
+    @include respond(tab-land)
+        font-size: 40% !important
+    @include respond(phone)
+        font-size: 30% !important
+    @include respond(mini-phone)
+        font-size: 20% !important
+    @include respond(big-screen) 
+        font-size: 75% !important
+
+body
+    min-height: 100%
+    margin: 0
+    font-family: Tahoma, Verdana, Arial, sans-serif
+
+.avatar
+    border: .2rem inset $dark-color
+    width: 10rem
+    height: 10rem
+
+.miniAvatar
+    border: .2rem inset $dark-color
+    width: 7rem
+    height: 7rem
+
+.chatAvatar
+    border: .1rem inset $dark-color
+    width: 3rem
+    height: 3rem
+
+
+.customWindow
+    border: .2rem outset $light-color
+    background-color: $main-color
+    margin-bottom: 2rem
+    a
+        font-size: 1.3rem
+    h3
+        padding-left: .5rem
+        background-color: $dark-blue
+        color: white
+        border-bottom: .2rem outset $light-color
+        font-size: 1.5rem
+    h4
+        padding: 1rem .5rem
+        font-size: 1.3rem
+    &__line
+        width: 100%
+        height: .15rem
+        background-color: $dark-color
+    &__author
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 0 .5rem
+        p
+            font-size: 1.3rem
+
+.customLine
+    width: .4rem
+    height: 3.4rem
+    background-color: #c0c0c0
+    border-top: 1px solid #ffffff
+    border-left: 1px solid #ffffff
+    border-bottom: 1px solid #404040
+    border-right: 1px solid #404040
+    margin: 0 1rem
+
+.assetsImg
+    width: 2.3rem
+    height: 2.3rem
+
+.pagination
+    display: flex
+    gap: .4rem
+    margin-top: 1rem
+    font-size: 1.3rem
+    &__btn
+        padding: .4rem .8rem
+        background: Gainsboro
+        border: .2rem outset LightGrey
+        cursor: pointer
+        &:hover
+            background: #dcdcdc
+        &:active
+            border: .2rem inset LightGrey
+        &:disabled
+            opacity: .5
+            cursor: default
+    &__btn.is-active
+        background: #000080
+        color: white
+        border: .2rem inset #000080
+
+.win98
+    background: Gainsboro
+    border-top: 2px solid #404040
+    border-left: 2px solid #404040
+    border-right: 2px solid #fff
+    border-bottom: 2px solid #fff
+    padding: .5rem 1rem
